@@ -35,15 +35,14 @@ const ProblemItemUser = ({ problem }) => {
         <div className="modal-overlay" onClick={() => setShowVideo(false)}>
           <div className="modal-backdrop" />
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="wrap"> 
+            <div className="wrap">
               <button
                 className="logout-btn"
                 onClick={() => setShowVideo(false)}
               >
                 Exit
               </button>
-              <div className="pad"></div>
-            </div>
+            <div className="pad"></div>
             <video
               src={problem.videoUrl}
               controls
