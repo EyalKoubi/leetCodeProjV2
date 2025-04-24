@@ -1,0 +1,198 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  width: clamp(280px, 90vw, 400px);
+  padding: 32px 28px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.3);
+}
+
+.modal-actions {
+  position: absolute;
+  inset-block-start: clamp(6px, 1.5vw, 10px);
+  inset-inline-end: clamp(8px, 2vw, 14px);
+}
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 24px 20px;
+  }
+}
+
+.close-btn {
+  all: unset;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  color: #ff3b3b;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+.close-btn:hover {
+  color: #e60000;
+  transform: scale(1.2);
+}
+
+@media (max-width: 480px) {
+  .close-btn {
+    font-size: 20px;
+    top: 6px;
+    right: 10px;
+  }
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin: 6px;
+  justify-content: center;
+}
+
+button.primary {
+  color: white;
+  padding: 10px 15px;
+  margin: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-exit {
+  justify-self: end;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff3b3b;
+  cursor: pointer;
+  line-height: 1;
+  user-select: none;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.modal-exit:hover {
+  transform: scale(1.2);
+  color: #e60000;
+}
+
+.success {
+  color: green;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.space {
+  margin: 8px;
+}
+
+.logout-btn {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 24px !important;
+  padding: 12px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  background: #ff4444 !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: background 0.2s !important;
+}
+
+.logout-btn:hover {
+  background: #e60000 !important;
+}
+
+.modal-open *:not(.modal-overlay):not(.modal-content):not(video):not(iframe) {
+  pointer-events: none !important;
+  user-select: none;
+  filter: blur(1px);
+}
+
+.wrap {
+  display: flex;
+}
+
+.pad {
+  margin-right: 400px;
+}
