@@ -34,7 +34,7 @@ const ProblemItemUser = ({ problem }) => {
       {showVideo && (
         <div className="modal-overlay" onClick={() => setShowVideo(false)}>
           <div className="modal-backdrop" />
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="wrap">
               <button
                 className="logout-btn"
@@ -49,6 +49,7 @@ const ProblemItemUser = ({ problem }) => {
               width="100%"
               style={{ borderRadius: "8px", marginTop: "12px" }}
             />
+            </div>
           </div>
         </div>
       )}
