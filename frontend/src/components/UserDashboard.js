@@ -85,10 +85,10 @@ const UserDashboard = ({ userId }) => {
   return (
     <div className="user-dashboard">
       <div className="wrap">
-        <div></div>
         <button className="logout-btn" onClick={() => navigate("/")}>
           Logout
         </button>
+        <div className="pad"></div>
       </div>
       <h1>Problem Collection 📚</h1>
 
