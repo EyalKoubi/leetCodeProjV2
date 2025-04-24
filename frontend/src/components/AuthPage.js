@@ -13,8 +13,6 @@ const AuthPage = ({ onLogin, setUserId }) => {
     setError("");
     const endpoint = isRegister ? "/auth/register" : "/auth/login";
 
-    console.log("📤 Sending login request:", userData);
-
     try {
       const res = await fetch(`https://leetcodeprojv2.onrender.com${endpoint}`, {
         method: "POST",
@@ -25,7 +23,6 @@ const AuthPage = ({ onLogin, setUserId }) => {
       });
 
       const data = await res.json();
-      console.log("📩 Server response:", data);
 
       if (!res.ok) throw new Error(data.message || "Something went wrong");
 
