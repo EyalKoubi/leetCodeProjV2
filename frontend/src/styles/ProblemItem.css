@@ -170,3 +170,7 @@
 .wrap {
   display: flex;
 }
+
+.pad {
+  margin-right: 400px;
+}
