@@ -23,7 +23,7 @@ const AdminDashboard = () => {
 
   const fetchProblems = async () => {
     try {
-      const res = await fetch("http://localhost:3002/admin/problems");
+      const res = await fetch("https://leetcodeprojv2.onrender.com/admin/problems");
       const data = await res.json();
       setProblems(data);
     } catch (error) {
