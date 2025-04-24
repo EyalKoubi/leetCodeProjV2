@@ -18,7 +18,7 @@ const UserDashboard = ({ userId }) => {
 
   const fetchProblems = async () => {
     try {
-      const res = await fetch("http://localhost:3002/admin/problems");
+      const res = await fetch("https://leetcodeprojv2.onrender.com/admin/problems");
       const data = await res.json();
       setProblems(data);
     } catch (error) {
@@ -31,7 +31,7 @@ const UserDashboard = ({ userId }) => {
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const res = await fetch("http://localhost:3002/user/profile", {
+      const res = await fetch("https://leetcodeprojv2.onrender.com/user/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -51,7 +51,7 @@ const UserDashboard = ({ userId }) => {
       const newStatus = !notificationsEnabled;
       setNotificationsEnabled(newStatus);
 
-      await fetch(`http://localhost:3002/auth/notifications/${userId}`, {
+      await fetch(`https://leetcodeprojv2.onrender.com/auth/notifications/${userId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ notificationsEnabled: newStatus }),
